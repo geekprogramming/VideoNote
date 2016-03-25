@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context="vn.bk.dao.thach.playvideonote.MainActivity">
+
+    <SurfaceView
+        android:id="@+id/videoSurface"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"/>
+
+    <RelativeLayout
+        android:id="@+id/layout_actionbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="#CC000000"
+        android:visibility="visible">
+        <TextView
+            android:id="@+id/tv_name_song"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#FFFFFF"
+            android:text="NameSong"
+            android:textSize="18dp"
+            android:layout_centerVertical="true"/>
+
+        <LinearLayout
+            android:id="@+id/layout_btn_actionbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true">
+
+            <ImageButton
+                android:id="@+id/btn_cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_cancel_9" />
+
+            <ImageButton
+                android:id="@+id/btn_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check_9" />
+
+            <ImageButton
+                android:id="@+id/btn_pen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_pen_9" />
+
+            <ImageButton
+                android:id="@+id/btn_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_note_9" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_control_media"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#CC000000"
+        android:visibility="visible">
+        <LinearLayout
+            android:id="@+id/layout_seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingTop="4dip"
+            android:orientation="horizontal">
+
+            <ImageButton android:id="@+id/prev"
+                style="@android:style/MediaButton.Previous"
+                android:contentDescription="@string/description" />
+
+            <ImageButton android:id="@+id/rew"
+                style="@android:style/MediaButton.Rew"
+                android:contentDescription="@string/description" />
+
+            <ImageButton android:id="@+id/pause"
+                style="@android:style/MediaButton.Play"
+                android:contentDescription="@string/description" />
+
+            <ImageButton android:id="@+id/ffwd"
+                style="@android:style/MediaButton.Ffwd"
+                android:contentDescription="@string/description" />
+
+            <ImageButton android:id="@+id/next"
+                style="@android:style/MediaButton.Next"
+                android:contentDescription="@string/description" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_btn_media_control"
+            android:layout_below="@id/layout_seek_bar"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton android:id="@+id/list_video"
+                android:layout_marginTop="-7dp"
+                android:paddingTop="4dip"
+                android:paddingBottom="4dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="4dip"
+                android:layout_gravity="top"
+                android:src="@drawable/ic_note_9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/description" />
+
+            <TextView android:id="@+id/time_current"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="4dip"
+                android:paddingLeft="4dip"
+                android:layout_gravity="center_horizontal"
+                android:textColor="#FFFFFF"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="4dip" />
+
+            <SeekBar
+                android:id="@+id/mediacontroller_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dip"
+                android:layout_weight="1"
+                android:layout_height="32dip" />
+
+            <TextView android:id="@+id/time_end"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:paddingTop="4dip"
+                android:paddingRight="4dip"
+                android:textColor="#FFFFFF"
+                android:layout_gravity="center_horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="4dip" />
+
+            <ImageButton android:id="@+id/fullscreen"
+                android:layout_marginTop="-7dp"
+                android:paddingTop="4dip"
+                android:paddingBottom="4dip"
+                android:paddingLeft="10dip"
+                android:paddingRight="4dip"
+                android:layout_gravity="top"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/description" />
+
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_voice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:layout_centerVertical="true"
+        android:background="#CC000000"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/icon_volume"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_volume_9"/>
+        <SeekBar
+            android:id="@+id/progress_volue"
+            android:layout_below="@id/icon_volume"
+            android:progress="80"
+            android:layout_width="32dp"
+            android:layout_height="300dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_light"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:layout_centerVertical="true"
+        android:background="#CC000000"
+        android:visibility="visible">
+        <ImageView
+            android:id="@+id/icon_bright"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_bright_9"/>
+        <SeekBar
+            android:id="@+id/progress_bright"
+            android:layout_below="@id/icon_bright"
+            android:progress="80"
+            android:layout_width="32dp"
+            android:layout_height="300dp" />
+
+    </RelativeLayout>
+</RelativeLayout>
